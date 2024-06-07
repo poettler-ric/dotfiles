@@ -1,13 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 bindkey -v
-
-source "${HOME}/.config/zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme"
 
 source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^ ' autosuggest-accept
@@ -55,10 +46,8 @@ alias suyi="$PACMAN -Sy && $PACMAN -Que && $PACMAN -Suy --ignore=linux --ignore=
 alias sy="$PACMAN -Sy && $PACMAN -Que"
 alias vdhcp="$SUDO virsh net-dhcp-leases default"
 
+eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f "${HOME}/.p10k.zsh" ]] || source "${HOME}/.p10k.zsh"
 
 # must be sourced at the end of the file
 source "${HOME}/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
