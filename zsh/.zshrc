@@ -13,8 +13,8 @@ source "${HOME}/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^ ' autosuggest-accept
 
 source "${HOME}/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh"
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey '^K' history-substring-search-up
+bindkey '^J' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
@@ -41,10 +41,11 @@ alias datetimestr="date +%Y%m%d%k%M"
 alias df="df -h"
 alias g=git
 alias grep=rg
-alias lg=lazygit
-alias la="$LS -a"
-alias ll="$LS -la"
 alias l="$LS -l"
+alias la="$LS -a"
+alias lg=lazygit
+alias ll="$LS -la"
+alias ls="$LS"
 alias o=yazi
 alias pacclean="$PACMAN -Sc"
 alias pacrmorphans="$PACMAN -Rs $($PACMAN -Qtdq)"
