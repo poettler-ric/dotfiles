@@ -93,12 +93,6 @@ export NNN_PLUG="l:_glg*;f:finder;c:fzcd.richi;o:fzopen;i:imgview;z:fzz;p:previe
 export NNN_FIFO="${HOME}/.nnn.fifo"
 
 ############################
-# XPLR SETTINGS
-############################
-
-export XPLR_BOOKMARK_FILE="${HOME}/.config/xplr/bookmarks"
-
-############################
 # SSH AGENT
 ############################
 
