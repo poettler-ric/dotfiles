@@ -77,6 +77,7 @@ o () {
   command nnn -x "$@"
 
   [ ! -f "$NNN_TMPFILE" ] || {
+    sed -ie 's/^cd /z /' "${NNN_TMPFILE}"
     . "$NNN_TMPFILE"
     rm -f -- "$NNN_TMPFILE" > /dev/null
   }
