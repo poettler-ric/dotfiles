@@ -87,10 +87,12 @@ fi
 # NNN SETTINGS
 ############################
 
-export NNN_OPENER=mimeo
-export NNN_BMS="d:~/Downloads;s:~/sync/study/tu-graz;q:/net/qnap;m:~/master_thesis/wflow_model.2"
-export NNN_PLUG="l:_glg*;f:finder;c:fzcd.richi;o:fzopen;i:imgview;z:fzz;p:preview-tui"
-export NNN_FIFO="${HOME}/.nnn.fifo"
+export NNN_OPENER="${HOME}/.config/nnn/plugins/nuke"
+export NNN_PLUG="p:preview-tui;z:autojump"
+export NNN_FIFO="${XDG_RUNTIME_DIR}/nnn.fifo"
+export BIN=1
+export GUI=1
+export KITTY_LISTEN_ON="unix:${XDG_RUNTIME_DIR}/kitty-${KITTY_PID}"
 
 ############################
 # SSH AGENT

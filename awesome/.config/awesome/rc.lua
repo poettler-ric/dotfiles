@@ -230,7 +230,7 @@ local globalkeys = gears.table.join(
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
 	awful.key({ modkey }, "o", function()
-		awful.spawn(terminal .. " -e yazi")
+		awful.spawn(terminal .. " -e " .. os.getenv("HOME") .. "/.config/awesome/bin/nnn_shell_wrap")
 	end, { description = "open file explorer", group = "launcher" }),
 	awful.key({ modkey }, "e", function()
 		awful.spawn("emacs")
