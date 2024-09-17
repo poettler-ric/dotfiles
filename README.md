@@ -1,8 +1,7 @@
-Personal dotfile collection
+Personal Configuration
+=
 
 Install with:
 ```
 stow <package>
-```
-
 ```
