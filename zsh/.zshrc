@@ -87,5 +87,7 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(fzf --zsh)"
 
+source "${HOME}/.config/zsh/scripts/ssh-agent.zsh"
+
 # must be sourced at the end of the file
 source "${HOME}/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
