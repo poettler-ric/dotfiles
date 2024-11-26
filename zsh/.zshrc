@@ -31,7 +31,11 @@ bindkey -M vicmd 'j' history-substring-search-down
 SUDO="sudo"
 PACMAN="yay"
 LS="eza"
-alias b=bat
+if command -v bat 2>&1 >/dev/null; then
+  alias b=bat
+elif command -v batcat 2>&1 >/dev/null; then
+  alias b=batcat
+fi
 alias cal="cal -m"
 alias datestr="date +%Y%m%d"
 alias datetimestr="date +%Y%m%d%k%M"
